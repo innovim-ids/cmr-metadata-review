@@ -38,7 +38,7 @@ gem 'jquery-ui-rails'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'minitest-rails-capybara', '3.0.2'
+gem 'minitest-rails-capybara'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -80,7 +80,7 @@ group :test do
   gem 'simplecov', '~> 0.21.2'
  # Easy installation and use of web drivers to run system tests with browsers
    gem 'webdrivers'
-   gem 'minitest-rails', '~> 3.0'
+   gem 'minitest-rails'
 gem 'railties', '>= 6.0.0'
 end
 
@@ -95,7 +95,7 @@ end
 #using puma server instead of webBrick
 gem 'puma', '~> 5.1'
 #base authentication gem
-gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'ca-omniauth-2'
+gem 'devise'
 #setting user permissions for pages
 gem 'cancan', '~> 1.6.10'
 
