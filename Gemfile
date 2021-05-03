@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 ruby "2.5.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.3'
+gem 'rails', '>= 6.1.3'
 # gem 'activesupport', '6.1.3'
 # gem 'actionpack', '6.1.3.1'
 # gem 'actionpack', '~> 6.1.3.1'
-
+gem 'activemodel' , '~> 6.1.3'
 # gem 'actionpack', '6.1.3'
-# gem 'activerecord', '~> 5.2.4.1'
+gem 'activerecord', '>= 6.1.3'
 # gem 'actionview', '6.1.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4', group: [:test]
@@ -81,7 +81,7 @@ group :test do
  # Easy installation and use of web drivers to run system tests with browsers
    gem 'webdrivers'
    gem 'minitest-rails', '~> 3.0'
-gem 'railties', '~> 6.1.3.1'
+gem 'railties', '>= 6.0.0'
 end
 
 group :development, :test do
