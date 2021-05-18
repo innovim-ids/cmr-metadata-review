@@ -743,7 +743,7 @@ class Record < ApplicationRecord
 
   def update_legacy_data(column_name, data, daac)
     record_data = record_datas.find_or_create_by(column_name: column_name, daac: daac)
-    record_data.update_attributes(data) if record_data
+    record_data.update(data) if record_data
   end
 
   def add_legacy_review(checked_by, comment, user = User.find_by(role: "admin"))
@@ -756,7 +756,7 @@ class Record < ApplicationRecord
 
   def add_long_name(long_name)
     record_data = record_datas.find_or_create_by(column_name: long_name_field, daac: daac)
-    record_data.update_attributes(value: long_name)
+    record_data.update(value: long_name)
   end
 
   def umm_json_link

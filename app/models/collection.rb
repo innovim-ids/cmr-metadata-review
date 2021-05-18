@@ -36,7 +36,7 @@ class Collection < Metadata
 
     Collection.transaction do
       collection = Collection.find_or_create_by(concept_id: concept_id)
-      collection.update_attributes!(short_name: short_name)
+      collection.update!(short_name: short_name)
       new_record = Record.create(recordable: collection, revision_id: revision_id, format: ingest_format, native_format: native_format, daac: daac_from_concept_id(concept_id))
 
       collection_data.each_with_index do |(key, value), i|
@@ -207,11 +207,11 @@ class Collection < Metadata
   end
 
   def finish!
-    update_attributes(cmr_update: false) if all_records_finished?
+    update(cmr_update: false) if all_records_finished?
   end
 
   def allow_updates!
-    update_attributes(cmr_update: true) unless update?
+    update(cmr_update: true) unless update?
   end
 
   def long_name
